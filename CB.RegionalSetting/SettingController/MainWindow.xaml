@@ -32,7 +32,7 @@
         </Style>
     </Window.Resources>
 
-    <Grid>
+    <Grid isc:SettingControl.SettingChanged="SettingControls_OnSettingChanged">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -43,8 +43,7 @@
         <Expander x:Name="expAllControls" Grid.Row="1"
                   VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
                   Header="All Settings" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <WrapPanel x:Name="ctnAllControls"
-                       isc:SettingControl.SettingChanged="CtnAllControls_OnSettingChanged" />
+            <WrapPanel x:Name="ctnAllControls" />
         </Expander>
     </Grid>
 </Window>

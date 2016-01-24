@@ -20,9 +20,10 @@
         <ComboBox x:Name="lstSetting" Grid.Column="1" MinWidth="100" Margin="{StaticResource MarginNormal}"
                   VerticalAlignment="Center" HorizontalContentAlignment="Center"
                   IsEditable="True" IsTextSearchEnabled="True"
-                  IsTextSearchCaseSensitive="False" TextSearch.TextPath="NameOfField"
+                  IsTextSearchCaseSensitive="False"
                   ItemsSource="{Binding ElementName=ctlMain, Path=SettingOptions}"
-                  Text="{Binding ElementName=ctlMain, Path=SettingValue}" />
+                  Text="{Binding ElementName=ctlMain, Path=SettingValue}"
+                  SelectedItem="{Binding ElementName=ctlMain, Path=SettingValue, Mode=OneWayToSource}"/>
 
         <Label Grid.Column="0" Margin="{StaticResource MarginNormal}"
                VerticalAlignment="Center" HorizontalContentAlignment="Right"

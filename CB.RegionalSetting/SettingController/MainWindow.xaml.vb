@@ -9,7 +9,7 @@ Class MainWindow
     Shared Sub New()
         _settingSerializer.Load()
     End Sub
-    
+
     Protected Overrides Sub OnInitialized(e As EventArgs)
         MyBase.OnInitialized(e)
         InitializeAllControls()
@@ -23,11 +23,25 @@ Class MainWindow
         MyBase.OnClosed(e)
     End Sub
 
-    Private Sub CtnAllControls_OnSettingChanged(sender As Object, e As RoutedEventArgs)
+    Private Sub SettingControls_OnSettingChanged(sender As Object, e As RoutedEventArgs)
         Dim settingControl As SettingControl = e.OriginalSource
         If IsNothing(settingControl) Then Return
-        AddRecentSettingControl(settingControl.SettingCategory)
+        Dim setting As InternationalSettings = settingControl.SettingCategory
+        AddRecentSettingControl(setting)
+        UpdateSetting(setting)
     End Sub
+
+    Private Sub UpdateSetting(setting As InternationalSettings)
+        For Each settingControl In GetAllSettingControls().Where(Function(c) c.SettingCategory = setting)
+            settingControl.UpdateSettingValue()
+        Next
+    End Sub
+
+    Private Function GetAllSettingControls() As IEnumerable(Of SettingControl)
+        Return _
+            ctnAllControls.Children.OfType (Of SettingControl).Concat(
+                ctnRecentControls.Children.OfType (Of SettingControl))
+    End Function
 
     Private Sub InitializeAllControls()
         AddSettingControls(ctnAllControls, [Enum].GetValues(GetType(InternationalSettings)))
@@ -39,15 +53,21 @@ Class MainWindow
 
     Private Shared Sub AddSettingControls(container As Panel, settings As IEnumerable(Of InternationalSettings))
         For Each setting In settings.Where(Function(s) s <> InternationalSettings.None)
-            Dim settingControl As New SettingControl With {.SettingCategory = setting}
-            settingControl.SettingOptions = _settingSerializer.SettingOptions(setting)
+            Dim settingControl As New SettingControl()
+            SetInternalSettingInfo(settingControl, setting)
             container.Children.Add(settingControl)
         Next
     End Sub
 
+    Private Shared Sub SetInternalSettingInfo(settingControl As SettingControl, settingCategory As InternationalSettings)
+        settingControl.SettingCategory = settingCategory
+        settingControl.SettingOptions = _settingSerializer.SettingOptions(settingCategory)
+    End Sub
+
     Private Sub AddRecentSettingControl(settingCategory As InternationalSettings)
         Dim recentSettingControls = ctnRecentControls.Children
-        If recentSettingControls.OfType(Of SettingControl).Any(Function(c) c.SettingCategory = settingCategory) Then Return
+        If recentSettingControls.OfType (Of SettingControl).Any(Function(c) c.SettingCategory = settingCategory) Then _
+            Return
 
         Dim settingControl As SettingControl
         If recentSettingControls.Count < MAX_RECENT_SETTINGS Then
@@ -56,7 +76,7 @@ Class MainWindow
             settingControl = recentSettingControls(MAX_RECENT_SETTINGS - 1)
             ctnRecentControls.Children.RemoveAt(MAX_RECENT_SETTINGS - 1)
         End If
-        settingControl.SettingCategory = settingCategory
+        SetInternalSettingInfo(settingControl, settingCategory)
         recentSettingControls.Insert(0, settingControl)
     End Sub
 

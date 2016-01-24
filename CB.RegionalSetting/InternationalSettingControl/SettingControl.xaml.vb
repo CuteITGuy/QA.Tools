@@ -1,4 +1,5 @@
-﻿Imports InternationalSettingHandler
+﻿Imports System.Collections.ObjectModel
+Imports InternationalSettingHandler
 
 Public Class SettingControl
     Public Property SettingCategory As InternationalSettings
@@ -33,7 +34,7 @@ Public Class SettingControl
                                                            New PropertyMetadata(Nothing))
 
 
-    Public Property SettingOptions As ICollection(Of Object)
+    Public Property SettingOptions As ObservableCollection(Of Object)
         Get
             Return GetValue(SettingOptionsProperty)
         End Get
@@ -45,8 +46,8 @@ Public Class SettingControl
 
     Public Shared ReadOnly SettingOptionsProperty As DependencyProperty =
                                DependencyProperty.Register("SettingOptions",
-                                                           GetType(IEnumerable(Of Object)), GetType(SettingControl),
-                                                           New PropertyMetadata(New List(Of Object)))
+                                                           GetType(ObservableCollection(Of Object)), GetType(SettingControl),
+                                                           New PropertyMetadata(New ObservableCollection(Of Object)))
 
 
     Public Custom Event SettingChanged As RoutedEventHandler

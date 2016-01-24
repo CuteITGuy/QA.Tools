@@ -1,12 +1,13 @@
-﻿Imports System.IO
+﻿Imports System.Collections.ObjectModel
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class InternationalSettingSerializer
     Public Sub New(filePath As String)
         Me.FilePath = filePath
-        SettingOptions = New Dictionary(Of InternationalSettings,ICollection(Of Object))()
+        SettingOptions = New Dictionary(Of InternationalSettings,ObservableCollection(Of Object))()
         For Each setting In [Enum].GetValues(GetType(InternationalSettings)).OfType (Of InternationalSettings)
-            SettingOptions(setting) = New List(Of Object)
+            SettingOptions(setting) = New ObservableCollection(Of Object)
         Next
     End Sub
 
@@ -14,7 +15,7 @@ Public Class InternationalSettingSerializer
 
     Public Property RecentSettings As ICollection(Of InternationalSettings) = New List(Of InternationalSettings)
 
-    Public Property SettingOptions As IDictionary(Of InternationalSettings, ICollection(Of Object))
+    Public Property SettingOptions As IDictionary(Of InternationalSettings, ObservableCollection(Of Object))
 
 
     Public Sub Load()
@@ -41,7 +42,7 @@ Public Class InternationalSettingSerializer
     Private Sub SetData(data As InternationalSettingData)
         RecentSettings = data.RecentSettings.ToList()
         For Each options In data.SettingOptions
-            SettingOptions(options.Setting) = options.Options.ToList()
+            SettingOptions(options.Setting) = New ObservableCollection(Of Object)(options.Options)
         Next
     End Sub
 End Class
