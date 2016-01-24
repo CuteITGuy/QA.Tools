@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InternationalSettingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RecentSettings>
+    <InternationalSettings>sCurrency</InternationalSettings>
+  </RecentSettings>
+  <SettingOptions>
+    <InternationSettingOptions>
+      <Setting>None</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>Locale</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>LocaleName</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>s1159</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>s2359</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sCountry</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sCurrency</Setting>
+      <Options>
+        <anyType xsi:type="xsd:string">$</anyType>
+      </Options>
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sDate</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sDecimal</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sGrouping</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sLanguage</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sList</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sLongDate</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sMonDecimalSep</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sMonGrouping</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sMonThousandSep</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sNativeDigits</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sNegativeSign</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sPositiveSign</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sShortDate</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sThousand</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sTime</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sTimeFormat</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sShortTime</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>sYearMonth</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iCalendarType</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iCountry</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iCurrDigits</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iCurrency</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iDate</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iDigits</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>NumShape</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iFirstDayOfWeek</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iFirstWeekOfYear</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iLZero</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iMeasure</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iNegCurr</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iNegNumber</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iPaperSize</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iTime</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iTimePrefix</Setting>
+      <Options />
+    </InternationSettingOptions>
+    <InternationSettingOptions>
+      <Setting>iTLZero</Setting>
+      <Options />
+    </InternationSettingOptions>
+  </SettingOptions>
+</InternationalSettingData>
