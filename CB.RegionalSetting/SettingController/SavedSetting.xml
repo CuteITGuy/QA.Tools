@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InternationalSettingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <RecentSettings>
-    <InternationalSettings>sCurrency</InternationalSettings>
+    <InternationalSettings>sLongDate</InternationalSettings>
+    <InternationalSettings>sShortDate</InternationalSettings>
+    <InternationalSettings>LocaleName</InternationalSettings>
   </RecentSettings>
   <SettingOptions>
     <InternationSettingOptions>
@@ -10,23 +12,34 @@
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>Locale</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">00000409</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>LocaleName</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">vi-VN</anyType>
+        <anyType xsi:type="xsd:string">en-US</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>s1159</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">AM</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>s2359</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">Chiều</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sCountry</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">United States</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sCurrency</Setting>
@@ -36,143 +49,214 @@
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sDate</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">-</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sDecimal</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">.</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sGrouping</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">3;0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sLanguage</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">ENU</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sList</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">,</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sLongDate</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">dddd, MMMM d, yyyy</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sMonDecimalSep</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">.</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sMonGrouping</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">3;0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sMonThousandSep</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">,</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sNativeDigits</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0123456789</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sNegativeSign</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">-</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sPositiveSign</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string" />
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sShortDate</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">yyyy/M/d</anyType>
+        <anyType xsi:type="xsd:string">M/d/yyyy</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sThousand</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">,</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sTime</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">:</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sTimeFormat</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">h:mm:ss tt</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sShortTime</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">h:mm tt</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>sYearMonth</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">MMMM yyyy</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iCalendarType</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">1</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iCountry</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">1</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iCurrDigits</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">3</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iCurrency</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iDate</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iDigits</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">2</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>NumShape</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">1</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iFirstDayOfWeek</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">6</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iFirstWeekOfYear</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iLZero</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">1</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iMeasure</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">1</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iNegCurr</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iNegNumber</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">1</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iPaperSize</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">1</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iTime</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iTimePrefix</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0</anyType>
+      </Options>
     </InternationSettingOptions>
     <InternationSettingOptions>
       <Setting>iTLZero</Setting>
-      <Options />
+      <Options>
+        <anyType xsi:type="xsd:string">0</anyType>
+      </Options>
     </InternationSettingOptions>
   </SettingOptions>
 </InternationalSettingData>
