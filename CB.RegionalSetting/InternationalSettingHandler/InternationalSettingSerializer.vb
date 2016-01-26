@@ -5,7 +5,7 @@ Imports System.Xml.Serialization
 Public Class InternationalSettingSerializer
     Public Sub New(filePath As String)
         Me.FilePath = filePath
-        SettingOptions = New Dictionary(Of InternationalSettings,ObservableCollection(Of Object))()
+        SettingOptions = New Dictionary(Of InternationalSettings, ObservableCollection(Of Object))()
         For Each setting In [Enum].GetValues(GetType(InternationalSettings)).OfType (Of InternationalSettings)
             SettingOptions(setting) = New ObservableCollection(Of Object)
         Next
@@ -28,8 +28,15 @@ Public Class InternationalSettingSerializer
     End Sub
 
     Public Sub Save()
-        Dim data As New InternationalSettingData(RecentSettings, SettingOptions)
-        Dim ser = GetSerializer()
+        Dim data As _
+                New InternationalSettingData(RecentSettings,
+                                             SettingOptions.ToDictionary(
+                                                 Function(pair) pair.Key,
+                                                 Function (pair As KeyValuePair (Of InternationalSettings,
+                                                                            ObservableCollection(Of Object))) _
+                                                                            CType(pair.Value, ICollection(Of Object))))
+ 
+                Dim ser = GetSerializer()
         Using writer As New StreamWriter(FilePath)
             ser.Serialize(writer, data)
         End Using

@@ -38,8 +38,7 @@ Class MainWindow
     End Sub
 
     Private Function GetAllSettingControls() As IEnumerable(Of SettingControl)
-        Return _
-            ctnAllControls.Children.OfType (Of SettingControl).Concat(
+        Return ctnAllControls.Children.OfType (Of SettingControl).Concat(
                 ctnRecentControls.Children.OfType (Of SettingControl))
     End Function
 
@@ -60,8 +59,8 @@ Class MainWindow
     End Sub
 
     Private Shared Sub SetInternalSettingInfo(settingControl As SettingControl, settingCategory As InternationalSettings)
-        settingControl.SettingCategory = settingCategory
         settingControl.SettingOptions = _settingSerializer.SettingOptions(settingCategory)
+        settingControl.SettingCategory = settingCategory
     End Sub
 
     Private Sub AddRecentSettingControl(settingCategory As InternationalSettings)
