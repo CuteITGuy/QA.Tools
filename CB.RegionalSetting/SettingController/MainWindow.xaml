@@ -36,11 +36,28 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <WrapPanel x:Name="ctnRecentControls" Grid.Row="0" />
 
-        <Expander x:Name="expAllControls" Grid.Row="1"
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Text="State:" />
+
+            <ComboBox x:Name="selState" Grid.Column="1" />
+
+            <Button x:Name="cmdSaveState" Grid.Column="3" Content="Save New State"
+                    Click="CmdSaveState_OnClick"/>
+        </Grid>
+
+        <Expander x:Name="expAllControls" Grid.Row="2"
                   VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
                   Header="All Settings" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <WrapPanel x:Name="ctnAllControls" />

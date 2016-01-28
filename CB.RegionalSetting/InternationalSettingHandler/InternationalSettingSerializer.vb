@@ -6,9 +6,10 @@ Public Class InternationalSettingSerializer
     Public Sub New(filePath As String)
         Me.FilePath = filePath
         SettingOptions = New Dictionary(Of InternationalSettings, ObservableCollection(Of Object))()
-        For Each setting In [Enum].GetValues(GetType(InternationalSettings)).OfType (Of InternationalSettings)
+        For Each setting In [Enum].GetValues(GetType(InternationalSettings)).OfType(Of InternationalSettings)
             SettingOptions(setting) = New ObservableCollection(Of Object)
         Next
+        States = New Dictionary(Of String, Dictionary(Of InternationalSettings, Object))
     End Sub
 
     Public Property FilePath As String
@@ -16,6 +17,8 @@ Public Class InternationalSettingSerializer
     Public Property RecentSettings As ICollection(Of InternationalSettings) = New List(Of InternationalSettings)
 
     Public Property SettingOptions As IDictionary(Of InternationalSettings, ObservableCollection(Of Object))
+
+    Public Property States As IDictionary(Of String, IDictionary(Of InternationalSettings, Object))
 
 
     Public Sub Load()
@@ -28,15 +31,8 @@ Public Class InternationalSettingSerializer
     End Sub
 
     Public Sub Save()
-        Dim data As _
-                New InternationalSettingData(RecentSettings,
-                                             SettingOptions.ToDictionary(
-                                                 Function(pair) pair.Key,
-                                                 Function (pair As KeyValuePair (Of InternationalSettings,
-                                                                            ObservableCollection(Of Object))) _
-                                                                            CType(pair.Value, ICollection(Of Object))))
- 
-                Dim ser = GetSerializer()
+        Dim data As New InternationalSettingData(RecentSettings, SettingOptions, States)
+        Dim ser = GetSerializer()
         Using writer As New StreamWriter(FilePath)
             ser.Serialize(writer, data)
         End Using

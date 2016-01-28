@@ -20,6 +20,12 @@ Public Class InternationalSettingManage
         Return result
     End Function
 
+    Public Shared Function GetCurrentSettingState() As IDictionary(Of InternationalSettings,Object)
+        Return [Enum].GetValues(GetType(InternationalSettings)).OfType (Of InternationalSettings).
+            Where(Function(setting) setting <> InternationalSettings.None).
+            ToDictionary(Function(setting) setting, Function(setting) GetSettingValue(setting))
+    End Function
+
     Public Shared Sub SetSettingValue(setting As InternationalSettings, settingValue As Object)
         If setting = InternationalSettings.None Then Return
         SetSettingValue(setting.ToString(), settingValue)

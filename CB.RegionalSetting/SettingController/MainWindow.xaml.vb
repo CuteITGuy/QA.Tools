@@ -1,5 +1,6 @@
 ﻿Imports InternationalSettingControl
 Imports InternationalSettingHandler
+Imports ModalDialogs
 
 Class MainWindow
     Private Const SAVED_SETTINGS_FILE = "SavedSetting.xml"
@@ -23,6 +24,13 @@ Class MainWindow
         MyBase.OnClosed(e)
     End Sub
 
+    Private Sub CmdSaveState_OnClick(sender As Object, e As RoutedEventArgs)
+        Dim dialog As New InputStateNameDialog()
+        If Not dialog.ShowDialog() Then Return
+
+        AddSettingState(dialog.StateName)
+    End Sub
+
     Private Sub SettingControls_OnSettingChanged(sender As Object, e As RoutedEventArgs)
         Dim settingControl As SettingControl = e.OriginalSource
         If IsNothing(settingControl) Then Return
@@ -39,7 +47,7 @@ Class MainWindow
 
     Private Function GetAllSettingControls() As IEnumerable(Of SettingControl)
         Return ctnAllControls.Children.OfType (Of SettingControl).Concat(
-                ctnRecentControls.Children.OfType (Of SettingControl))
+            ctnRecentControls.Children.OfType (Of SettingControl))
     End Function
 
     Private Sub InitializeAllControls()
@@ -84,7 +92,17 @@ Class MainWindow
         _settingSerializer.Save()
     End Sub
 
+    Private Shared Sub AddSettingState(stateName As String)
+        _settingSerializer.States(stateName) = InternationalSettingManage.GetCurrentSettingState()
+    End Sub
+
     Private Shared Function LoadRecentSettings() As IEnumerable(Of InternationalSettings)
         Return _settingSerializer.RecentSettings
     End Function
 End Class
+
+
+'TODO: Choose setting state
+'TODO: Reset feature
+'TODO: Button hide
+'TODO: NotifyIcon

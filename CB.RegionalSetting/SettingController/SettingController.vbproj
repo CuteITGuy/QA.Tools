@@ -145,6 +145,10 @@
       <Project>{CFE153F1-5094-47D8-95D9-FE24BC0A3FCC}</Project>
       <Name>InternationalSettingHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModalDialogs\ModalDialogs.vbproj">
+      <Project>{754bd47a-85a8-4684-a47b-f9acf3c2161c}</Project>
+      <Name>ModalDialogs</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="SavedSetting.xml" />
